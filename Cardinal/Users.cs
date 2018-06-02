@@ -70,6 +70,7 @@ namespace Cardinal {
             LoadUsersListToDataGridView();
         }
 
+
         private void btnQuery_Click(object sender, EventArgs e) {
             try {
                 var user = userService.GetUser(Int32.Parse(txtId.Text));
@@ -113,6 +114,17 @@ namespace Cardinal {
                 MessageBox.Show("No se ha podido crear el usuario, error: " + ex.Message);
             }
             RefreshUsersList();
+        }
+
+        private void dgvUsers_CellClick(object sender, DataGridViewCellEventArgs e) {
+            DataGridView dgv = sender as DataGridView;
+            if (dgv == null)
+                return;
+            if (dgv.CurrentRow.Selected) {
+                var user = userService.GetUser(Int32.Parse(dgv.CurrentRow.Cells[0].Value.ToString()));
+                CurrentUser = user;
+                FillInterfaceWithSelectedUser();
+            }
         }
 
         #endregion
