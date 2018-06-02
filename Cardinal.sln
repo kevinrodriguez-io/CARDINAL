@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cardinal", "Cardinal\Cardinal.csproj", "{C24A0E8F-8912-4F0A-B7BD-7531A1E0C709}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cardinal.Model", "Cardinal.Model\Cardinal.Model.csproj", "{A01C17A2-24AA-47F5-B50A-88D6EA3DA24F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cardinal.Service", "Cardinal.Service\Cardinal.Service.csproj", "{4EE0D8E2-01BF-4C59-A17B-6ABE530303E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{C24A0E8F-8912-4F0A-B7BD-7531A1E0C709}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C24A0E8F-8912-4F0A-B7BD-7531A1E0C709}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C24A0E8F-8912-4F0A-B7BD-7531A1E0C709}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A01C17A2-24AA-47F5-B50A-88D6EA3DA24F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A01C17A2-24AA-47F5-B50A-88D6EA3DA24F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A01C17A2-24AA-47F5-B50A-88D6EA3DA24F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A01C17A2-24AA-47F5-B50A-88D6EA3DA24F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4EE0D8E2-01BF-4C59-A17B-6ABE530303E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4EE0D8E2-01BF-4C59-A17B-6ABE530303E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4EE0D8E2-01BF-4C59-A17B-6ABE530303E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4EE0D8E2-01BF-4C59-A17B-6ABE530303E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
