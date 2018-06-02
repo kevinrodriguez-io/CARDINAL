@@ -18,8 +18,8 @@ namespace Cardinal.Model {
         public CardinalDbContext() : base("Server=(localdb)\\mssqllocaldb;Database=cardinal-db;Trusted_Connection=True;MultipleActiveResultSets=true") {
         }
 
-        public CardinalDbContext(string nameOrConnectionString) : base(nameOrConnectionString) {
-        }
+        //public CardinalDbContext(string nameOrConnectionString) : base(nameOrConnectionString) {
+        //}
 
     }
 }
