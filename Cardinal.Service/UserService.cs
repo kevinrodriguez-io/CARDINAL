@@ -16,23 +16,32 @@ namespace Cardinal.Service {
         }
 
         public void Add(User user) {
-            throw new NotImplementedException();
+            dbContext.Users.Add(user);
+            dbContext.SaveChanges();
         }
 
         public User GetUser(int id) {
-            throw new NotImplementedException();
+            return dbContext.Users.Find(id);
         }
 
         public List<User> GetUsers() {
-            throw new NotImplementedException();
+            return dbContext.Users.ToList();
         }
 
         public void Remove(User user) {
-            throw new NotImplementedException();
+            dbContext.Users.Remove(user);
+            dbContext.SaveChanges();
         }
 
         public void Update(User user) {
-            throw new NotImplementedException();
+            var originalUser = dbContext.Users.Find(user.Id);
+            originalUser.Name = user.Name;
+            originalUser.LastName = user.LastName;
+            originalUser.BirthDate = user.BirthDate;
+            originalUser.Direction = user.Direction;
+            originalUser.Email = user.Email;
+            originalUser.PhoneNumber = user.PhoneNumber;
+            dbContext.SaveChanges();
         }
     }
 }
