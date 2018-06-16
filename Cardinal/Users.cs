@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Unity;
 
 namespace Cardinal {
     public partial class Users : Form {
@@ -26,13 +27,13 @@ namespace Cardinal {
         #region UI_Logic
 
         private void FillInterfaceWithSelectedUser() {
-            txtId.Text = CurrentUser.Id.ToString();
+            txtId.Text = CurrentUser.Id != 0 ? CurrentUser.Id.ToString() : "";
             txtName.Text = CurrentUser.Name;
             txtLastname.Text = CurrentUser.LastName;
             txtDirection.Text = CurrentUser.Direction;
             txtEmail.Text = CurrentUser.Email;
             txtPhone.Text = CurrentUser.PhoneNumber;
-            dtpBirthDate.Value = CurrentUser.BirthDate;
+            dtpBirthDate.Value = CurrentUser.Id != 0 ? CurrentUser.BirthDate : DateTime.Now;
         }
 
         private void SetSelectedUserFields() {
@@ -123,11 +124,18 @@ namespace Cardinal {
             if (dgv.CurrentRow.Selected) {
                 var user = userService.GetUser(Int32.Parse(dgv.CurrentRow.Cells[0].Value.ToString()));
                 CurrentUser = user;
+                if (CurrentUser == null) CurrentUser = new User();
                 FillInterfaceWithSelectedUser();
             }
         }
+        private void tsmiUserAccounts_Click(object sender, EventArgs e) {
+            var userAccountsForm = Program.Container.Resolve<UserAccounts>();
+            userAccountsForm.User = CurrentUser;
+            userAccountsForm.Visible = true;
+        }
 
         #endregion
+
 
     }
 }

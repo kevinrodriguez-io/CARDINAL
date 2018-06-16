@@ -34,13 +34,13 @@ namespace Cardinal.Service {
         }
 
         public void Update(User user) {
-            var originalUser = dbContext.Users.Find(user.Id);
-            originalUser.Name = user.Name;
-            originalUser.LastName = user.LastName;
-            originalUser.BirthDate = user.BirthDate;
-            originalUser.Direction = user.Direction;
-            originalUser.Email = user.Email;
-            originalUser.PhoneNumber = user.PhoneNumber;
+            var original = dbContext.Users.Find(user.Id);
+            original.Name = user.Name;
+            original.LastName = user.LastName;
+            original.BirthDate = user.BirthDate;
+            original.Direction = user.Direction;
+            original.Email = user.Email;
+            original.PhoneNumber = user.PhoneNumber;
             dbContext.SaveChanges();
         }
     }

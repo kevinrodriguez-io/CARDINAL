@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,8 +19,9 @@ namespace Cardinal.Model {
         public string PhoneNumber { get; set; }
 
         // Relations
-
+        [Browsable(false)]
         public virtual ICollection<Account> Accounts { get; set; }
+        [Browsable(false)]
         public virtual ICollection<UserDirectionHistory> UserDirectionHistories { get; set; }
 
     }

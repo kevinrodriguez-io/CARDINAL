@@ -24,5 +24,9 @@ namespace Cardinal {
             var usersForm = Program.Container.Resolve<Users>();
             usersForm.Visible = true;
         }
+
+        private void Main_Load(object sender, EventArgs e) {
+
+        }
     }
 }

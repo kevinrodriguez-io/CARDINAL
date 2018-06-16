@@ -31,11 +31,12 @@ namespace Cardinal {
 
             container.RegisterType<CardinalDbContext>();
             container.RegisterType<IUserService, UserService>();
-
+            container.RegisterType<IAccountService, AccountService>();
+            
             // Register Forms
-
             container.RegisterType<Main>();
             container.RegisterType<Users>();
+            container.RegisterType<UserAccounts>();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
