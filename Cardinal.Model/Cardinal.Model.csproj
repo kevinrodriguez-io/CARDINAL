@@ -55,6 +55,10 @@
     <Compile Include="Migrations\201806020548301_initial.Designer.cs">
       <DependentUpon>201806020548301_initial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201807071630296_AccountCardsReferencia.cs" />
+    <Compile Include="Migrations\201807071630296_AccountCardsReferencia.Designer.cs">
+      <DependentUpon>201807071630296_AccountCardsReferencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Transaction.cs" />
     <Compile Include="User.cs" />
@@ -68,6 +72,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201806020548301_initial.resx">
       <DependentUpon>201806020548301_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201807071630296_AccountCardsReferencia.resx">
+      <DependentUpon>201807071630296_AccountCardsReferencia.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

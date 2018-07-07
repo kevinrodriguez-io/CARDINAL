@@ -24,5 +24,7 @@ namespace Cardinal.Model {
         public virtual ICollection<AccountCutting> AccountCuttings { get; set; }
         [Browsable(false)]
         public virtual ICollection<Transaction> AccountTransactions { get; set; }
+        [Browsable(false)]
+        public virtual ICollection<Card> Cards { get; set; }
     }
 }

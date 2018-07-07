@@ -28,15 +28,16 @@ namespace Cardinal {
             container = new UnityContainer();
             
             // Register Services and Database
-
             container.RegisterType<CardinalDbContext>();
             container.RegisterType<IUserService, UserService>();
             container.RegisterType<IAccountService, AccountService>();
+            container.RegisterType<ICardService, CardService>();
             
             // Register Forms
             container.RegisterType<Main>();
             container.RegisterType<Users>();
             container.RegisterType<UserAccounts>();
+            container.RegisterType<Cards>();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

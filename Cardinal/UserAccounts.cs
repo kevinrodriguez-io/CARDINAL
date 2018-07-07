@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Unity;
 
 namespace Cardinal {
     public partial class UserAccounts : Form {
@@ -122,6 +123,12 @@ namespace Cardinal {
                 if (CurrentAccount == null) CurrentAccount = new Account();
                 FillInterfaceWithSelectedUserAccount();
             }
+        }
+
+        private void tsmiCards_Click(object sender, EventArgs e) {
+            Cards cardsForm = Program.Container.Resolve<Cards>();
+            cardsForm.Account = CurrentAccount;
+            cardsForm.Visible = true;
         }
     }
 }
