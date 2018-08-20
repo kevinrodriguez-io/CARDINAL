@@ -8,7 +8,6 @@ namespace Cardinal.Model {
     public class Card {
 
         // Table fields
-
         public int Id { get; set; }
         public string Brand { get; set; }
         public string Identifier { get; set; }
@@ -16,7 +15,6 @@ namespace Cardinal.Model {
         public DateTime ExpirationDate { get; set; }
 
         // Relations
-
         public virtual Account Account { get; set; }
 
     }

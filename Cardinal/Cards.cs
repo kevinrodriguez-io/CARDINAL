@@ -53,6 +53,8 @@ namespace Cardinal {
             AllAccountCards = cardService.GetCardsByAccountId(Account.Id);
             try {
                 CurrentCard = Account.Cards.First();
+            } catch (ArgumentNullException) {
+                CurrentCard = new Card();
             } catch (InvalidOperationException) {
                 CurrentCard = new Card();
             }

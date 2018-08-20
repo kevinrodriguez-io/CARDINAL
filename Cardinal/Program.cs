@@ -38,10 +38,13 @@ namespace Cardinal {
             container.RegisterType<Users>();
             container.RegisterType<UserAccounts>();
             container.RegisterType<Cards>();
+            container.RegisterType<AccountCuttings>();
+            container.RegisterType<Transactions>();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(Container.Resolve<Main>());
+
         }
     }
 }

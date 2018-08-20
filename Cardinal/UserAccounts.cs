@@ -29,6 +29,8 @@ namespace Cardinal {
             AllUserAccounts = accountService.GetAccountsByUserId(User.Id);
             try {
                 CurrentAccount = User.Accounts.First();
+            } catch (ArgumentNullException) {
+                CurrentAccount = new Account();
             } catch (InvalidOperationException) {
                 CurrentAccount = new Account();
             }
