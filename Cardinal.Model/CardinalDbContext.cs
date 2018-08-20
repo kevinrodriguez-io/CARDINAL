@@ -4,6 +4,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static Cardinal.Model.Properties.Settings;
 
 namespace Cardinal.Model {
     public class CardinalDbContext : DbContext {
@@ -15,11 +16,7 @@ namespace Cardinal.Model {
         public DbSet<User> Users { get; set; }
         public DbSet<UserDirectionHistory> UserDirectionHistories { get; set; }
 
-        public CardinalDbContext() : base("Server=(localdb)\\mssqllocaldb;Database=cardinal-db;Trusted_Connection=True;MultipleActiveResultSets=true") {
-        }
-
-        //public CardinalDbContext(string nameOrConnectionString) : base(nameOrConnectionString) {
-        //}
+        public CardinalDbContext() : base(Default.CardinalDbContextConnectionString) {}
 
     }
 }

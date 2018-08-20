@@ -14,8 +14,7 @@ namespace Cardinal.Model {
         public decimal? Deposit { get; set; }
         public decimal? Withdrawal { get; set; }
         public DateTime TransactionDate { get; set; }
-
-        // Properties
+        public string AssignedCard { get; set; } = null;
 
         public virtual Account Account { get; set; }
 

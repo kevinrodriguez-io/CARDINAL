@@ -59,7 +59,16 @@
     <Compile Include="Migrations\201807071630296_AccountCardsReferencia.Designer.cs">
       <DependentUpon>201807071630296_AccountCardsReferencia.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808201604542_AddedCardColToTransaction.cs" />
+    <Compile Include="Migrations\201808201604542_AddedCardColToTransaction.Designer.cs">
+      <DependentUpon>201808201604542_AddedCardColToTransaction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Transaction.cs" />
     <Compile Include="User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -68,6 +77,10 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201806020548301_initial.resx">
@@ -75,6 +88,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201807071630296_AccountCardsReferencia.resx">
       <DependentUpon>201807071630296_AccountCardsReferencia.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808201604542_AddedCardColToTransaction.resx">
+      <DependentUpon>201808201604542_AddedCardColToTransaction.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
