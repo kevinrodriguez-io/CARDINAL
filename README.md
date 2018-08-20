@@ -19,7 +19,9 @@ Para poder utilizar dependency injection en un form con su respectivo servicio s
 realizar los siguientes pasos:
 
 1- Registar el servicio que se desea inyectar en Program.cs (Seguir los ejemplos)
+
 2- Registar el form que desea recibir el servicio inyectable en Program.cs
+
 3- Instanciar el form pero en lugar de usar new MiForm(), usar Program.Container.Resolve < MiForm >, ver ejemplo en Main.cs
 
 Al usar .Resolve, el container pasa por parametro todas las dependencias que ya ha registrado,
