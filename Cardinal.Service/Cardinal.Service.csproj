@@ -47,8 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccountCuttingService.cs" />
     <Compile Include="AccountService.cs" />
     <Compile Include="CardService.cs" />
+    <Compile Include="IAccountCuttingService.cs" />
     <Compile Include="IAccountService.cs" />
     <Compile Include="ICardService.cs" />
     <Compile Include="ITransactionService.cs" />

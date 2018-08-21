@@ -16,5 +16,7 @@ namespace Cardinal.Service {
         List<AccountCutting> GetAccountCuttings();
         List<AccountCutting> GetAccountCuttingsByAccount(int accountId);
 
+        void GenerateAllAccountCuttings(DateTime fromDate, DateTime toDate);
+
     }
 }
