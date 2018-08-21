@@ -32,6 +32,7 @@ namespace Cardinal {
             container.RegisterType<IUserService, UserService>();
             container.RegisterType<IAccountService, AccountService>();
             container.RegisterType<ICardService, CardService>();
+            container.RegisterType<ITransactionService, TransactionService>();
 
             // Register Forms
             container.RegisterType<Main>();

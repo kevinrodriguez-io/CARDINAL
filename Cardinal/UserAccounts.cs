@@ -35,6 +35,7 @@ namespace Cardinal {
                 CurrentAccount = new Account();
             }
             LoadUserAccountsListToDataGridView();
+            FillInterfaceWithSelectedUserAccount();
         }
 
         private void LoadUserAccountsListToDataGridView() {
@@ -108,7 +109,9 @@ namespace Cardinal {
         }
 
         private void tsmiTransactions_Click(object sender, EventArgs e) {
-            MessageBox.Show("En construcción!");
+            Transactions transactionsForm = Program.Container.Resolve<Transactions>();
+            transactionsForm.Account = CurrentAccount;
+            transactionsForm.Visible = true;
         }
 
         private void tsmiAccountCuttings_Click(object sender, EventArgs e) {

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Cardinal.Model;
+using Cardinal.Service;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,8 +12,18 @@ using System.Windows.Forms;
 
 namespace Cardinal {
     public partial class Transactions : Form {
-        public Transactions() {
+
+        public Account Account { get; set; }
+
+        private ITransactionService transactionService;
+        public Transactions(ITransactionService transactionService) {
             InitializeComponent();
+            this.transactionService = transactionService;
+        }
+
+        private void dgvTransactions_CellClick(object sender, DataGridViewCellEventArgs e) {
+
+
         }
     }
 }

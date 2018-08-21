@@ -69,6 +69,7 @@ namespace Cardinal {
                 CurrentUser = new User();
             }
             LoadUsersListToDataGridView();
+            FillInterfaceWithSelectedUser();
         }
 
 
