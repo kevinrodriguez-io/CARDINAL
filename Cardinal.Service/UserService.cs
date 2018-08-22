@@ -10,9 +10,11 @@ namespace Cardinal.Service {
     public class UserService : IUserService {
 
         private CardinalDbContext dbContext;
+        private IUserDirectionHistoryService userDirectionHistoryService;
 
         public UserService(CardinalDbContext dbContext) {
             this.dbContext = dbContext;
+            userDirectionHistoryService = new UserDirectionHistoryService(dbContext);
         }
 
         public void Add(User user) {
@@ -35,12 +37,14 @@ namespace Cardinal.Service {
 
         public void Update(User user) {
             var original = dbContext.Users.Find(user.Id);
-            original.Name = user.Name;
-            original.LastName = user.LastName;
-            original.BirthDate = user.BirthDate;
-            original.Direction = user.Direction;
-            original.Email = user.Email;
-            original.PhoneNumber = user.PhoneNumber;
+            dbContext.Entry(original).CurrentValues.SetValues(user);
+            if (original.Direction != user.Direction) {
+                userDirectionHistoryService.Add(new UserDirectionHistory {
+                    ChangedDate = DateTime.Now,
+                    LastDirection = original.Direction,
+                    NewDirection = user.Direction
+                });
+            }
             dbContext.SaveChanges();
         }
     }

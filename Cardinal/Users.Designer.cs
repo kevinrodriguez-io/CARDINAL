@@ -44,6 +44,7 @@
             this.btnCreate = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tsmiUserAccounts = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiUserDirectionHistory = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsers)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -52,7 +53,7 @@
             // 
             this.dgvUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUsers.Location = new System.Drawing.Point(9, 122);
-            this.dgvUsers.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvUsers.Margin = new System.Windows.Forms.Padding(2);
             this.dgvUsers.Name = "dgvUsers";
             this.dgvUsers.RowTemplate.Height = 24;
             this.dgvUsers.Size = new System.Drawing.Size(582, 277);
@@ -72,7 +73,7 @@
             // txtName
             // 
             this.txtName.Location = new System.Drawing.Point(59, 25);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(111, 20);
             this.txtName.TabIndex = 2;
@@ -80,7 +81,7 @@
             // txtLastname
             // 
             this.txtLastname.Location = new System.Drawing.Point(227, 25);
-            this.txtLastname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLastname.Margin = new System.Windows.Forms.Padding(2);
             this.txtLastname.Name = "txtLastname";
             this.txtLastname.Size = new System.Drawing.Size(188, 20);
             this.txtLastname.TabIndex = 4;
@@ -98,7 +99,7 @@
             // dtpBirthDate
             // 
             this.dtpBirthDate.Location = new System.Drawing.Point(120, 49);
-            this.dtpBirthDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dtpBirthDate.Margin = new System.Windows.Forms.Padding(2);
             this.dtpBirthDate.Name = "dtpBirthDate";
             this.dtpBirthDate.Size = new System.Drawing.Size(296, 20);
             this.dtpBirthDate.TabIndex = 5;
@@ -116,7 +117,7 @@
             // txtDirection
             // 
             this.txtDirection.Location = new System.Drawing.Point(66, 72);
-            this.txtDirection.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDirection.Margin = new System.Windows.Forms.Padding(2);
             this.txtDirection.Name = "txtDirection";
             this.txtDirection.Size = new System.Drawing.Size(350, 20);
             this.txtDirection.TabIndex = 7;
@@ -134,7 +135,7 @@
             // txtPhone
             // 
             this.txtPhone.Location = new System.Drawing.Point(66, 95);
-            this.txtPhone.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(2);
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(104, 20);
             this.txtPhone.TabIndex = 10;
@@ -152,7 +153,7 @@
             // txtEmail
             // 
             this.txtEmail.Location = new System.Drawing.Point(227, 95);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(188, 20);
             this.txtEmail.TabIndex = 12;
@@ -170,7 +171,7 @@
             // btnQuery
             // 
             this.btnQuery.Location = new System.Drawing.Point(419, 48);
-            this.btnQuery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnQuery.Margin = new System.Windows.Forms.Padding(2);
             this.btnQuery.Name = "btnQuery";
             this.btnQuery.Size = new System.Drawing.Size(173, 19);
             this.btnQuery.TabIndex = 13;
@@ -191,7 +192,7 @@
             // txtId
             // 
             this.txtId.Location = new System.Drawing.Point(438, 25);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(156, 20);
             this.txtId.TabIndex = 15;
@@ -199,7 +200,7 @@
             // btnUpdate
             // 
             this.btnUpdate.Location = new System.Drawing.Point(419, 72);
-            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(70, 20);
             this.btnUpdate.TabIndex = 16;
@@ -210,7 +211,7 @@
             // btnDelete
             // 
             this.btnDelete.Location = new System.Drawing.Point(419, 97);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(70, 20);
             this.btnDelete.TabIndex = 17;
@@ -221,7 +222,7 @@
             // btnCreate
             // 
             this.btnCreate.Location = new System.Drawing.Point(494, 72);
-            this.btnCreate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnCreate.Margin = new System.Windows.Forms.Padding(2);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(99, 45);
             this.btnCreate.TabIndex = 18;
@@ -233,7 +234,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiUserAccounts});
+            this.tsmiUserAccounts,
+            this.tsmiUserDirectionHistory});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -247,6 +249,13 @@
             this.tsmiUserAccounts.Size = new System.Drawing.Size(123, 20);
             this.tsmiUserAccounts.Text = "Cuentas del usuario";
             this.tsmiUserAccounts.Click += new System.EventHandler(this.tsmiUserAccounts_Click);
+            // 
+            // tsmiUserDirectionHistory
+            // 
+            this.tsmiUserDirectionHistory.Name = "tsmiUserDirectionHistory";
+            this.tsmiUserDirectionHistory.Size = new System.Drawing.Size(142, 20);
+            this.tsmiUserDirectionHistory.Text = "Historial de direcciones";
+            this.tsmiUserDirectionHistory.Click += new System.EventHandler(this.tsmiUserDirectionHistory_Click);
             // 
             // Users
             // 
@@ -275,7 +284,7 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Users";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -313,5 +322,6 @@
         private System.Windows.Forms.Button btnCreate;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem tsmiUserAccounts;
+        private System.Windows.Forms.ToolStripMenuItem tsmiUserDirectionHistory;
     }
 }

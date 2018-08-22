@@ -58,7 +58,6 @@ namespace Cardinal {
 
         #endregion
 
-
         #region Events
 
         private void Users_Load(object sender, EventArgs e) {
@@ -71,7 +70,6 @@ namespace Cardinal {
             LoadUsersListToDataGridView();
             FillInterfaceWithSelectedUser();
         }
-
 
         private void btnQuery_Click(object sender, EventArgs e) {
             try {
@@ -129,14 +127,19 @@ namespace Cardinal {
                 FillInterfaceWithSelectedUser();
             }
         }
+
         private void tsmiUserAccounts_Click(object sender, EventArgs e) {
             var userAccountsForm = Program.Container.Resolve<UserAccounts>();
             userAccountsForm.User = CurrentUser;
             userAccountsForm.Visible = true;
         }
 
-        #endregion
+        private void tsmiUserDirectionHistory_Click(object sender, EventArgs e) {
+            var userDirectionHistories = Program.Container.Resolve<UserDirectionHistories>();
+            userDirectionHistories.Visible = true;
+        }
 
+        #endregion
 
     }
 }

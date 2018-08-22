@@ -108,6 +108,12 @@
     <Compile Include="UserAccounts.Designer.cs">
       <DependentUpon>UserAccounts.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserDirectionHistories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserDirectionHistories.Designer.cs">
+      <DependentUpon>UserDirectionHistories.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserAccounts.resx">
       <DependentUpon>UserAccounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserDirectionHistories.resx">
+      <DependentUpon>UserDirectionHistories.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users.resx">
       <DependentUpon>Users.cs</DependentUpon>

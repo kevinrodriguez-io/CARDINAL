@@ -33,6 +33,7 @@ namespace Cardinal {
             container.RegisterType<IAccountService, AccountService>();
             container.RegisterType<ICardService, CardService>();
             container.RegisterType<ITransactionService, TransactionService>();
+            container.RegisterType<IUserDirectionHistoryService, UserDirectionHistoryService>();
 
             // Register Forms
             container.RegisterType<Main>();
@@ -41,6 +42,7 @@ namespace Cardinal {
             container.RegisterType<Cards>();
             container.RegisterType<AccountCuttings>();
             container.RegisterType<Transactions>();
+            container.RegisterType<UserDirectionHistories>();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
