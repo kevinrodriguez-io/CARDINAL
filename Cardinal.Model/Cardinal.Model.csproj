@@ -67,6 +67,10 @@
     <Compile Include="Migrations\201808220419494_needed.Designer.cs">
       <DependentUpon>201808220419494_needed.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808221642418_AddedChangedDateToUserDirectionHistory.cs" />
+    <Compile Include="Migrations\201808221642418_AddedChangedDateToUserDirectionHistory.Designer.cs">
+      <DependentUpon>201808221642418_AddedChangedDateToUserDirectionHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -98,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808220419494_needed.resx">
       <DependentUpon>201808220419494_needed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808221642418_AddedChangedDateToUserDirectionHistory.resx">
+      <DependentUpon>201808221642418_AddedChangedDateToUserDirectionHistory.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

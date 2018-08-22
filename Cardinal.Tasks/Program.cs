@@ -10,8 +10,5 @@ namespace Cardinal.Tasks {
 
         }
 
-
-
-
     }
 }

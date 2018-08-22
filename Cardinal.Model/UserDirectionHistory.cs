@@ -13,7 +13,7 @@ namespace Cardinal.Model {
         public int UserId { get; set; }
         public string LastDirection { get; set; }
         public string NewDirection { get; set; }
-
+        public DateTime ChangedDate { get; set; }
         // Relations
 
         public virtual User User { get; set; }
