@@ -63,6 +63,10 @@
     <Compile Include="Migrations\201808201604542_AddedCardColToTransaction.Designer.cs">
       <DependentUpon>201808201604542_AddedCardColToTransaction.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201808220419494_needed.cs" />
+    <Compile Include="Migrations\201808220419494_needed.Designer.cs">
+      <DependentUpon>201808220419494_needed.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -91,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808201604542_AddedCardColToTransaction.resx">
       <DependentUpon>201808201604542_AddedCardColToTransaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808220419494_needed.resx">
+      <DependentUpon>201808220419494_needed.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
