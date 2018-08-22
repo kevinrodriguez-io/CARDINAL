@@ -127,6 +127,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Cardinal.Model\Cardinal.Model.csproj">
+      <Project>{a01c17a2-24aa-47f5-b50a-88d6ea3da24f}</Project>
+      <Name>Cardinal.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Cardinal.Service\Cardinal.Service.csproj">
       <Project>{4ee0d8e2-01bf-4c59-a17b-6abe530303e7}</Project>
       <Name>Cardinal.Service</Name>
