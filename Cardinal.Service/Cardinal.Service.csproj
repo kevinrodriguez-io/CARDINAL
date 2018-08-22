@@ -54,7 +54,9 @@
     <Compile Include="IAccountService.cs" />
     <Compile Include="ICardService.cs" />
     <Compile Include="ITransactionService.cs" />
+    <Compile Include="IUserDirectionHistoryService.cs" />
     <Compile Include="TransactionService.cs" />
+    <Compile Include="UserDirectionHistoryService.cs" />
     <Compile Include="UserService.cs" />
     <Compile Include="IUserService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
