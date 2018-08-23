@@ -15,13 +15,15 @@ namespace Cardinal {
     public partial class Users : Form {
 
         private IUserService userService;
+        private IUserDirectionHistoryService userDirectionHistoryService;
 
         public User CurrentUser { get; set; }
         public List<User> AllUsers { get; set; }
 
-        public Users(IUserService userService) {
-            this.userService = userService;
+        public Users(IUserService userService, IUserDirectionHistoryService userDirectionHistoryService) {
             InitializeComponent();
+            this.userService = userService;
+            this.userDirectionHistoryService = userDirectionHistoryService;
         }
 
         #region UI_Logic
@@ -87,9 +89,19 @@ namespace Cardinal {
         }
 
         private void btnUpdate_Click(object sender, EventArgs e) {
+
+            var shouldAddToDirecitonHistory = txtDirection.Text != CurrentUser.Direction;
+            var originalDirection = (string)CurrentUser.Direction.Clone();
+
             SetSelectedUserFields();
             try {
                 userService.Update(CurrentUser);
+                if (shouldAddToDirecitonHistory) userDirectionHistoryService.Add(new UserDirectionHistory {
+                    ChangedDate = DateTime.Now,
+                    LastDirection = originalDirection,
+                    NewDirection = CurrentUser.Direction,
+                    UserId = CurrentUser.Id
+                });
             } catch (Exception ex) {
                 MessageBox.Show("No se ha podido actualizar el usuario, error: " + ex.Message);
                 return;
@@ -136,6 +148,7 @@ namespace Cardinal {
 
         private void tsmiUserDirectionHistory_Click(object sender, EventArgs e) {
             var userDirectionHistories = Program.Container.Resolve<UserDirectionHistories>();
+            userDirectionHistories.User = CurrentUser;
             userDirectionHistories.Visible = true;
         }
 

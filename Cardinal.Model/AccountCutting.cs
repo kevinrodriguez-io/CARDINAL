@@ -11,8 +11,6 @@ namespace Cardinal.Model {
 
         public int Id { get; set; }
         public int AccountId { get; set; }
-        //public string AccountDescription { get; set; }
-        //public string NationalIdentifier { get; set; }
         public decimal TotalDeposit { get; set; }
         public decimal TotalWithdrawal { get; set; }
         public int IntrestRate { get; set; }

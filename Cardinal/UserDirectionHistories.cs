@@ -24,6 +24,7 @@ namespace Cardinal {
         private void UserDirectionHistories_Load(object sender, EventArgs e) {
             AllUserDirectionHistories = userDirectionHistoryService.GetUserDirectionHistoriesByUserId(User.Id);
             DisplayUserDirectionHistories = ((UserDirectionHistory[])AllUserDirectionHistories.ToArray().Clone()).ToList();
+            LoadUserDirectionHistoriesListToDataGridView();
         }
 
         private void LoadUserDirectionHistoriesListToDataGridView() {

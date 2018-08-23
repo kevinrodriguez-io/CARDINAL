@@ -38,13 +38,6 @@ namespace Cardinal.Service {
         public void Update(User user) {
             var original = dbContext.Users.Find(user.Id);
             dbContext.Entry(original).CurrentValues.SetValues(user);
-            if (original.Direction != user.Direction) {
-                userDirectionHistoryService.Add(new UserDirectionHistory {
-                    ChangedDate = DateTime.Now,
-                    LastDirection = original.Direction,
-                    NewDirection = user.Direction
-                });
-            }
             dbContext.SaveChanges();
         }
     }
