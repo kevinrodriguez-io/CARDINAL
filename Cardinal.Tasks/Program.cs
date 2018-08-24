@@ -1,5 +1,6 @@
 ﻿using Cardinal.Model;
 using Cardinal.Service;
+using Cardinal.Tasks.Seeder;
 using System;
 using Unity;
 using static System.Console;
@@ -23,10 +24,17 @@ namespace Cardinal.Tasks {
             Container.RegisterType<ICardService, CardService>();
             Container.RegisterType<ITransactionService, TransactionService>();
             Container.RegisterType<IUserDirectionHistoryService, UserDirectionHistoryService>();
+            container.RegisterType<UserSeeder>();
         }
 
         public static void Main(string[] args) {
             ConfigureDependencyInjection();
+            WriteLine("Generating stuff");
+            var seeder = Container.Resolve<UserSeeder>();
+            WriteLine("Saving stuff");
+            seeder.GenerateUsers(16000);
+            WriteLine("Saving stuff done!");
+            ReadKey();
         }
 
     }

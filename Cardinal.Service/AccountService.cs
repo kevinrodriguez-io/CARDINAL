@@ -23,7 +23,7 @@ namespace Cardinal.Service {
             return dbContext.Accounts.Find(id);
         }
 
-        public Account GetAccountForCardIdentifier(string cardIdentifier) {\
+        public Account GetAccountForCardIdentifier(string cardIdentifier) {
             var card = dbContext.Cards.Where(I => I.Identifier == cardIdentifier).First();
             return card.Account;
         }
