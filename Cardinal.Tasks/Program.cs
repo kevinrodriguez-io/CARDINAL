@@ -17,12 +17,12 @@ namespace Cardinal.Tasks {
         }
 
         private static void ConfigureDependencyInjection() {
-            container.RegisterType<CardinalDbContext>();
-            container.RegisterType<IUserService, UserService>();
-            container.RegisterType<IAccountService, AccountService>();
-            container.RegisterType<ICardService, CardService>();
-            container.RegisterType<ITransactionService, TransactionService>();
-            container.RegisterType<IUserDirectionHistoryService, UserDirectionHistoryService>();
+            Container.RegisterType<CardinalDbContext>();
+            Container.RegisterType<IUserService, UserService>();
+            Container.RegisterType<IAccountService, AccountService>();
+            Container.RegisterType<ICardService, CardService>();
+            Container.RegisterType<ITransactionService, TransactionService>();
+            Container.RegisterType<IUserDirectionHistoryService, UserDirectionHistoryService>();
         }
 
         public static void Main(string[] args) {

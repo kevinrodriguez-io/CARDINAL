@@ -11,6 +11,7 @@ namespace Cardinal.Service {
         void Remove(Account account);
         void Update(Account account);
         Account GetAccount(int id);
+        Account GetAccountForCardIdentifier(string cardIdentifier);
         List<Account> GetAccounts();
         List<Account> GetAccountsByUserId(int userId);
     }
