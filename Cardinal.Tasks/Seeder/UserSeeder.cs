@@ -24,7 +24,7 @@ namespace Cardinal.Tasks.Seeder {
         }
 
         public void RunSeeder() {
-            SeedUsers(1600);
+            SeedUsers(100);
             UserSeederDelegate?.DidSeedUsers();
             Console.WriteLine("Seeded users");
             foreach (var user in context.Users.ToList()) SeedAccountsForUser(user, RandomNumber.Next(1, 3));
@@ -85,7 +85,7 @@ namespace Cardinal.Tasks.Seeder {
             decimal? depositTotal = 0, withdrawalTotal = 0;
             for (int t = 0; t < amount; t++) {
 
-                bool isDeposit = RandomNumber.Next(0, 1) == 1;
+                bool isDeposit = RandomNumber.Next(-100, 100) >= 0;
 
                 decimal withdrawal = decimal.Zero;
                 decimal deposit = decimal.Zero;
@@ -101,7 +101,7 @@ namespace Cardinal.Tasks.Seeder {
                     generateWithdrawal = true;
                 }
 
-                if (!generateDeposit && generateWithdrawal) break;
+                if (!generateDeposit && !generateWithdrawal) break;
 
                 Transaction transaction = new Transaction {
                     AssignedCard = card.Identifier,
