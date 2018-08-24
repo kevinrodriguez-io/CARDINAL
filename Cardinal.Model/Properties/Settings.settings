@@ -5,9 +5,9 @@
     <Setting Name="CardinalDbContextConnectionString" Type="(Connection string)" Scope="Application">
       <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
 &lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
-  &lt;ConnectionString&gt;Server=localhost\SQLEXPRESS;Database=cardinal-db;Trusted_Connection=True;MultipleActiveResultSets=true&lt;/ConnectionString&gt;
+  &lt;ConnectionString&gt;Server=(localdb)\mssqllocaldb;Database=cardinal-db;Trusted_Connection=True;MultipleActiveResultSets=true&lt;/ConnectionString&gt;
 &lt;/SerializableConnectionString&gt;</DesignTimeValue>
-      <Value Profile="(Default)">Server=localhost\SQLEXPRESS;Database=cardinal-db;Trusted_Connection=True;MultipleActiveResultSets=true</Value>
+      <Value Profile="(Default)">Server=(localdb)\mssqllocaldb;Database=cardinal-db;Trusted_Connection=True;MultipleActiveResultSets=true</Value>
     </Setting>
   </Settings>
 </SettingsFile>

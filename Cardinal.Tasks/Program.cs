@@ -29,13 +29,11 @@ namespace Cardinal.Tasks {
 
         public static void Main(string[] args) {
             ConfigureDependencyInjection();
-            WriteLine("Generating stuff");
             var seeder = Container.Resolve<UserSeeder>();
-            WriteLine("Saving stuff");
-            seeder.GenerateUsers(16000);
-            WriteLine("Saving stuff done!");
+            seeder.RunSeeder();
             ReadKey();
         }
 
+        
     }
 }

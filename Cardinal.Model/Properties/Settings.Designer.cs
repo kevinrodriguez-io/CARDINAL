@@ -26,8 +26,8 @@ namespace Cardinal.Model.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Server=localhost\\SQLEXPRESS;Database=cardinal-db;Trusted_Connection=True;Multiple" +
-            "ActiveResultSets=true")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server=(localdb)\\mssqllocaldb;Database=cardinal-db;Trusted_Connection=True;Multip" +
+            "leActiveResultSets=true")]
         public string CardinalDbContextConnectionString {
             get {
                 return ((string)(this["CardinalDbContextConnectionString"]));
