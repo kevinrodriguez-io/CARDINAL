@@ -135,5 +135,32 @@ namespace Cardinal {
             cardsForm.Account = CurrentAccount;
             cardsForm.Visible = true;
         }
+
+        private async void btnRebuildModel_Click(object sender, EventArgs e) {
+            try {
+                prbLoader.MarqueeAnimationSpeed = 30;
+                await accountService.ReBuildAccountsModel();
+            } catch (Exception ex) {
+                MessageBox.Show($"{ex.Message}", "Error reconstruyendo modelo de aprendizaje");
+            } finally {
+                prbLoader.MarqueeAnimationSpeed = 0;
+            }
+        }
+
+        private async void btnSuggestType_Click(object sender, EventArgs e) {
+            if (string.IsNullOrEmpty(txtCashPayment.Text) || !float.TryParse(txtCashPayment.Text, out float result)) {
+                MessageBox.Show("Datos no válidos", "Por favor ingrese un dato válido en el campo de monto para sugerir un tipo de cuenta");
+                return;
+            }
+            try {
+                prbLoader.MarqueeAnimationSpeed = 30;
+                var predicted = await accountService.PredictAccountType(float.Parse(txtCashPayment.Text));
+                txtType.Text = predicted;
+            } catch (Exception ex) {
+                MessageBox.Show($"{ex.Message}", "Error al predecir tipo de cuenta");
+            } finally {
+                prbLoader.MarqueeAnimationSpeed = 0;
+            }
+        }
     }
 }

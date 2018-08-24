@@ -40,6 +40,9 @@
             this.dtpCuttingDate = new System.Windows.Forms.DateTimePicker();
             this.txtCashPayment = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.btnSuggestType = new System.Windows.Forms.Button();
+            this.prbLoader = new System.Windows.Forms.ProgressBar();
+            this.btnRebuildModel = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUserAccounts)).BeginInit();
             this.SuspendLayout();
@@ -144,11 +147,11 @@
             // dgvUserAccounts
             // 
             this.dgvUserAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvUserAccounts.Location = new System.Drawing.Point(9, 122);
+            this.dgvUserAccounts.Location = new System.Drawing.Point(9, 155);
             this.dgvUserAccounts.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvUserAccounts.Name = "dgvUserAccounts";
             this.dgvUserAccounts.RowTemplate.Height = 24;
-            this.dgvUserAccounts.Size = new System.Drawing.Size(379, 277);
+            this.dgvUserAccounts.Size = new System.Drawing.Size(379, 244);
             this.dgvUserAccounts.TabIndex = 25;
             this.dgvUserAccounts.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvUserAccounts_CellClick);
             // 
@@ -208,11 +211,44 @@
             this.label2.TabIndex = 30;
             this.label2.Text = "Pago de contado";
             // 
+            // btnSuggestType
+            // 
+            this.btnSuggestType.Location = new System.Drawing.Point(135, 97);
+            this.btnSuggestType.Name = "btnSuggestType";
+            this.btnSuggestType.Size = new System.Drawing.Size(75, 20);
+            this.btnSuggestType.TabIndex = 32;
+            this.btnSuggestType.Text = "Sugerir tipo";
+            this.btnSuggestType.UseVisualStyleBackColor = true;
+            this.btnSuggestType.Click += new System.EventHandler(this.btnSuggestType_Click);
+            // 
+            // prbLoader
+            // 
+            this.prbLoader.Enabled = false;
+            this.prbLoader.Location = new System.Drawing.Point(12, 123);
+            this.prbLoader.MarqueeAnimationSpeed = 0;
+            this.prbLoader.Name = "prbLoader";
+            this.prbLoader.Size = new System.Drawing.Size(374, 23);
+            this.prbLoader.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
+            this.prbLoader.TabIndex = 33;
+            // 
+            // btnRebuildModel
+            // 
+            this.btnRebuildModel.Location = new System.Drawing.Point(12, 97);
+            this.btnRebuildModel.Name = "btnRebuildModel";
+            this.btnRebuildModel.Size = new System.Drawing.Size(117, 20);
+            this.btnRebuildModel.TabIndex = 34;
+            this.btnRebuildModel.Text = "Reconstruir modelo";
+            this.btnRebuildModel.UseVisualStyleBackColor = true;
+            this.btnRebuildModel.Click += new System.EventHandler(this.btnRebuildModel_Click);
+            // 
             // UserAccounts
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(398, 409);
+            this.Controls.Add(this.btnRebuildModel);
+            this.Controls.Add(this.prbLoader);
+            this.Controls.Add(this.btnSuggestType);
             this.Controls.Add(this.txtCashPayment);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label3);
@@ -262,5 +298,8 @@
         private System.Windows.Forms.TextBox txtCashPayment;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ToolStripMenuItem tsmiCards;
+        private System.Windows.Forms.Button btnSuggestType;
+        private System.Windows.Forms.ProgressBar prbLoader;
+        private System.Windows.Forms.Button btnRebuildModel;
     }
 }
