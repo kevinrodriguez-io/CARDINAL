@@ -207,6 +207,7 @@
             this.cmbCustomers.Name = "cmbCustomers";
             this.cmbCustomers.Size = new System.Drawing.Size(144, 21);
             this.cmbCustomers.TabIndex = 15;
+            this.cmbCustomers.SelectedIndexChanged += new System.EventHandler(this.cmbCustomers_SelectionIndexChanged);
             this.cmbCustomers.SelectedValueChanged += new System.EventHandler(this.cmbCustomers_SelectedValueChanged);
             // 
             // btnClear
@@ -251,7 +252,7 @@
             this.cmbCards.Size = new System.Drawing.Size(142, 21);
             this.cmbCards.TabIndex = 17;
             // 
-            // frmDeposito
+            // frmDeposit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -271,7 +272,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "frmDeposito";
+            this.Name = "frmDeposit";
             this.Text = "frmDeposito";
             this.Load += new System.EventHandler(this.frmDeposito_Load);
             this.ResumeLayout(false);

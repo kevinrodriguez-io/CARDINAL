@@ -44,7 +44,7 @@ namespace Cardinal.Cashier
 
         private void frmDeposito_Load(object sender, EventArgs e) {
 
-            
+            LoadComboBoxUSerIdToComboBox();
         }
         
 
@@ -62,8 +62,15 @@ namespace Cardinal.Cashier
 
         */
         private void LoadCardsToComboBoxForUserId(int userId) {
+            cmbCards.Items.Clear();
             var userCards = cardService.GetCardsByUserId(userId);
             cmbCards.Items.AddRange(userCards.Select(I => new ComboBoxItem { Text = I.Identifier, Value = I.Identifier }).ToArray());
+        }
+
+        private void LoadComboBoxUSerIdToComboBox()
+        {
+            var userID = userService.GetUsers();
+            cmbCustomers.Items.AddRange(userID.Select(I => new ComboBoxItem { Text = I.Name, Value = I.Id }).ToArray());
         }
 
         // Cuando ocupe obtener el valor del combo de cards le manda por parametro cmbCards, y cuando ocupe el de usuarios, cmbUsuarios
@@ -79,20 +86,13 @@ namespace Cardinal.Cashier
 
             try
             {
-                
-                if (string.IsNullOrEmpty(txtQuantity.Text))
-                {
-                    decimal withDrawal = decimal.Zero;
-                    txtWithDrawal.Text = Convert.ToString(withDrawal);
-                }
-                else
-                {
-                    if (string.IsNullOrEmpty(txtWithDrawal.Text))
-                    {
-                        decimal deposit = decimal.Zero;
-                        txtQuantity.Text = Convert.ToString(deposit);
-                    }
-                }
+
+
+                var deposit = Convert.ToDecimal(txtQuantity.Text);
+                var withdrawal = Convert.ToDecimal(txtWithDrawal.Text);
+
+
+
                 var cardIdentifier = Convert.ToString(GetObjectFromCombobox(cmbCards));
                 var account = accountService.GetAccountForCardIdentifier(cardIdentifier);
 
@@ -100,7 +100,9 @@ namespace Cardinal.Cashier
                 {
                     AccountId = account.Id,
                     TransactionDate = DateTime.Now,
-                    AssignedCard = cardIdentifier
+                    AssignedCard = cardIdentifier,
+                    Deposit = deposit,
+                    Withdrawal = withdrawal
                 };
                 transactionService.Add(transaction);
             }
@@ -146,16 +148,26 @@ namespace Cardinal.Cashier
 
         private void btnAccept_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrEmpty(txtQuantity.Text) || string.IsNullOrEmpty(txtWithDrawal.Text))
+            {
+
+                MessageBox.Show("Debe completar la informacion");
+
+                return;
+
+            }
             SaveTransaction();
+            MessageBox.Show("Transaccion Realizada Correctamente");
         }
 
         private void cmbCustomers_SelectedValueChanged(object sender, EventArgs e)
         {
-            //cmbCustomers.Text = cmbCustomers Value = Usuario.Id | => cbbUsuarios_SelectionChanged()
-
 
         }
 
-         
+        private void cmbCustomers_SelectionIndexChanged(object sender, EventArgs e)
+        {
+            LoadCardsToComboBoxForUserId(Convert.ToInt32(GetObjectFromCombobox(cmbCustomers)));
+        }
     }
 }
