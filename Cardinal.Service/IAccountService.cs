@@ -14,5 +14,7 @@ namespace Cardinal.Service {
         Account GetAccountForCardIdentifier(string cardIdentifier);
         List<Account> GetAccounts();
         List<Account> GetAccountsByUserId(int userId);
+        Task ReBuildAccountsModel();
+        Task<string> PredictAccountType(float amount);
     }
 }

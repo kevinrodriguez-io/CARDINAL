@@ -1,5 +1,6 @@
 ﻿using Cardinal.Model;
 using Cardinal.Service;
+using Cardinal.Tasks.Seeder;
 using System;
 using Unity;
 using static System.Console;
@@ -23,11 +24,26 @@ namespace Cardinal.Tasks {
             Container.RegisterType<ICardService, CardService>();
             Container.RegisterType<ITransactionService, TransactionService>();
             Container.RegisterType<IUserDirectionHistoryService, UserDirectionHistoryService>();
+            container.RegisterType<UserSeeder>();
         }
 
         public static void Main(string[] args) {
             ConfigureDependencyInjection();
+            if (args.Length == 0) {
+                WriteLine("Please provide a parameter (seed, ml)");
+                ReadKey();
+            } else if (args[0].ToLowerInvariant().Trim() == "seed") {
+                SeedDataBase();
+            } else if (args[0].ToLowerInvariant().Trim() == "ml") {
+
+            }
         }
 
+        private static void SeedDataBase() {
+            var seeder = Container.Resolve<UserSeeder>();
+            seeder.RunSeeder();
+            ReadKey();
+        }
+        
     }
 }
