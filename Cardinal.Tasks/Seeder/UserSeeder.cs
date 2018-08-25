@@ -24,7 +24,7 @@ namespace Cardinal.Tasks.Seeder {
         }
 
         public void RunSeeder() {
-            SeedUsers(100);
+            SeedUsers(5000);
             UserSeederDelegate?.DidSeedUsers();
             Console.WriteLine("Seeded users");
             foreach (var user in context.Users.ToList()) SeedAccountsForUser(user, RandomNumber.Next(1, 3));

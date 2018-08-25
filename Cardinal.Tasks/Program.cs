@@ -29,14 +29,7 @@ namespace Cardinal.Tasks {
 
         public static void Main(string[] args) {
             ConfigureDependencyInjection();
-            if (args.Length == 0) {
-                WriteLine("Please provide a parameter (seed, ml)");
-                ReadKey();
-            } else if (args[0].ToLowerInvariant().Trim() == "seed") {
-                SeedDataBase();
-            } else if (args[0].ToLowerInvariant().Trim() == "ml") {
-
-            }
+            SeedDataBase();
         }
 
         private static void SeedDataBase() {
