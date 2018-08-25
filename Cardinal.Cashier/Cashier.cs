@@ -1,4 +1,5 @@
 ﻿using System;
+using Unity;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -40,19 +41,16 @@ namespace Cardinal.Cashier
             fh.Show();
         }
 
-        private void btnDeposito_Click(object sender, EventArgs e)
-        {
-            OpenFormPanel(new frmDeposito());
-        }
-
-        private void btnRetiros_Click(object sender, EventArgs e)
-        {
-            OpenFormPanel(new FrmWithdrawal());
-        }
-
         private void panelContainer_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void btnDeposito_Click(object sender, EventArgs e)
+        {
+            OpenFormPanel(Program.Container.Resolve<frmDeposit>());
+
+        }
+
     }
 }

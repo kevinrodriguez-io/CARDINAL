@@ -26,16 +26,15 @@ namespace Cardinal.Cashier {
         static void Main() {
 
             // Register Services and Database
-            container.RegisterType<CardinalDbContext>();
-            container.RegisterType<IUserService, UserService>();
-            container.RegisterType<IAccountService, AccountService>();
-            container.RegisterType<ICardService, CardService>();
-            container.RegisterType<ITransactionService, TransactionService>();
+            Container.RegisterType<CardinalDbContext>();
+            Container.RegisterType<IUserService, UserService>();
+            Container.RegisterType<IAccountService, AccountService>();
+            Container.RegisterType<ICardService, CardService>();
+            Container.RegisterType<ITransactionService, TransactionService>();
 
             // Register Forms
-            container.RegisterType<Cashier>();
-            container.RegisterType<frmDeposito>();
-            container.RegisterType<FrmWithdrawal>();
+            Container.RegisterType<Cashier>();
+            container.RegisterType<frmDeposit>();
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

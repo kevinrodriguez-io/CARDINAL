@@ -80,17 +80,12 @@
     <Compile Include="Cashier.Designer.cs">
       <DependentUpon>Cashier.cs</DependentUpon>
     </Compile>
+    <Compile Include="ComboBoxItem.cs" />
     <Compile Include="frmDeposit.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDeposit.Designer.cs">
       <DependentUpon>frmDeposit.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FrmWithdrawal.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmWithdrawal.Designer.cs">
-      <DependentUpon>FrmWithdrawal.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,9 +94,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmDeposit.resx">
       <DependentUpon>frmDeposit.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FrmWithdrawal.resx">
-      <DependentUpon>FrmWithdrawal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

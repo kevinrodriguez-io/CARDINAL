@@ -44,5 +44,17 @@ namespace Cardinal.Service {
             context.SaveChanges();
         }
 
+        public List<Card> GetCardsByUserId(int userId)
+        {
+            User user = context.Users.Find(userId);
+            if (user == null) throw new Exception("Usuario no encontrado");
+            List<Card> cards = user.Accounts.SelectMany(Account => Account.Cards).ToList();
+            return cards;
+        }
+
+        public List<Card> GetCardsByAccountId(int accountId)
+        {
+            return context.Cards.Where(Card => Card.AccountId == accountId).ToList();
+        }
     }
 }

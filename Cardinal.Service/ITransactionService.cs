@@ -14,5 +14,8 @@ namespace Cardinal.Service {
         List<Transaction> GetTransactions();
         List<Transaction> GetTransactionsByAccountId(int accountId);
         List<Transaction> GetTransactionsByUserId(int userId);
+        List<Card> GetCardsByAccountId(int accountId);
+        List<Card> GetCardsByUserId(int userId);
+       
     }
 }

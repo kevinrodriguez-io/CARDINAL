@@ -30,8 +30,6 @@
         {
             this.panelVertical = new System.Windows.Forms.Panel();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnSalir = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnRetiros = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDeposito = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panelLogo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,8 +47,6 @@
             // 
             this.panelVertical.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.panelVertical.Controls.Add(this.bunifuFlatButton1);
-            this.panelVertical.Controls.Add(this.btnSalir);
-            this.panelVertical.Controls.Add(this.btnRetiros);
             this.panelVertical.Controls.Add(this.btnDeposito);
             this.panelVertical.Controls.Add(this.panelLogo);
             this.panelVertical.Dock = System.Windows.Forms.DockStyle.Left;
@@ -81,7 +77,7 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 90D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 193);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(0, 97);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
@@ -95,84 +91,13 @@
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuFlatButton1.Click += new System.EventHandler(this.bunifuFlatButton4_Click);
             // 
-            // btnSalir
-            // 
-            this.btnSalir.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnSalir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSalir.BorderRadius = 0;
-            this.btnSalir.ButtonText = "Reportes";
-            this.btnSalir.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSalir.DisabledColor = System.Drawing.Color.Gray;
-            this.btnSalir.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnSalir.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSalir.Iconimage = null;
-            this.btnSalir.Iconimage_right = null;
-            this.btnSalir.Iconimage_right_Selected = null;
-            this.btnSalir.Iconimage_Selected = null;
-            this.btnSalir.IconMarginLeft = 0;
-            this.btnSalir.IconMarginRight = 0;
-            this.btnSalir.IconRightVisible = true;
-            this.btnSalir.IconRightZoom = 0D;
-            this.btnSalir.IconVisible = true;
-            this.btnSalir.IconZoom = 90D;
-            this.btnSalir.IsTab = false;
-            this.btnSalir.Location = new System.Drawing.Point(0, 145);
-            this.btnSalir.Name = "btnSalir";
-            this.btnSalir.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btnSalir.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.btnSalir.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnSalir.selected = false;
-            this.btnSalir.Size = new System.Drawing.Size(193, 48);
-            this.btnSalir.TabIndex = 4;
-            this.btnSalir.Text = "Reportes";
-            this.btnSalir.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnSalir.Textcolor = System.Drawing.Color.LightGray;
-            this.btnSalir.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnRetiros
-            // 
-            this.btnRetiros.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.btnRetiros.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btnRetiros.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnRetiros.BorderRadius = 0;
-            this.btnRetiros.ButtonText = "Retiros";
-            this.btnRetiros.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRetiros.DisabledColor = System.Drawing.Color.Gray;
-            this.btnRetiros.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnRetiros.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnRetiros.Iconimage = null;
-            this.btnRetiros.Iconimage_right = null;
-            this.btnRetiros.Iconimage_right_Selected = null;
-            this.btnRetiros.Iconimage_Selected = null;
-            this.btnRetiros.IconMarginLeft = 0;
-            this.btnRetiros.IconMarginRight = 0;
-            this.btnRetiros.IconRightVisible = true;
-            this.btnRetiros.IconRightZoom = 0D;
-            this.btnRetiros.IconVisible = true;
-            this.btnRetiros.IconZoom = 90D;
-            this.btnRetiros.IsTab = false;
-            this.btnRetiros.Location = new System.Drawing.Point(0, 97);
-            this.btnRetiros.Name = "btnRetiros";
-            this.btnRetiros.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
-            this.btnRetiros.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(43)))), ((int)(((byte)(55)))));
-            this.btnRetiros.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnRetiros.selected = false;
-            this.btnRetiros.Size = new System.Drawing.Size(193, 48);
-            this.btnRetiros.TabIndex = 2;
-            this.btnRetiros.Text = "Retiros";
-            this.btnRetiros.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnRetiros.Textcolor = System.Drawing.Color.LightGray;
-            this.btnRetiros.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRetiros.Click += new System.EventHandler(this.btnRetiros_Click);
-            // 
             // btnDeposito
             // 
             this.btnDeposito.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnDeposito.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(53)))), ((int)(((byte)(65)))));
             this.btnDeposito.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnDeposito.BorderRadius = 0;
-            this.btnDeposito.ButtonText = "Deposito";
+            this.btnDeposito.ButtonText = "Transacciones";
             this.btnDeposito.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnDeposito.DisabledColor = System.Drawing.Color.Gray;
             this.btnDeposito.Dock = System.Windows.Forms.DockStyle.Top;
@@ -196,7 +121,7 @@
             this.btnDeposito.selected = false;
             this.btnDeposito.Size = new System.Drawing.Size(193, 48);
             this.btnDeposito.TabIndex = 1;
-            this.btnDeposito.Text = "Deposito";
+            this.btnDeposito.Text = "Transacciones";
             this.btnDeposito.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnDeposito.Textcolor = System.Drawing.Color.LightGray;
             this.btnDeposito.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -292,8 +217,6 @@
         #endregion
 
         private System.Windows.Forms.Panel panelVertical;
-        private Bunifu.Framework.UI.BunifuFlatButton btnSalir;
-        private Bunifu.Framework.UI.BunifuFlatButton btnRetiros;
         private Bunifu.Framework.UI.BunifuFlatButton btnDeposito;
         private System.Windows.Forms.Panel panelLogo;
         private System.Windows.Forms.Label label1;
