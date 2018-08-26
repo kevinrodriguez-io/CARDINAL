@@ -135,5 +135,8 @@
       <Name>Cardinal.Service</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="dll\Bunifu_UI_v1.5.3.dll" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
